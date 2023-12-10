@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'OpenSans';
+    /*nome da fonte*/
+    src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+    /*caminho de onde está o arquivo da fonte*/
+    font-size: 1em;
+}
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+    font-size: 1em;
+}
+
+header {
+    color: orangered;
+    width: 100%;
+    height: 88px;
+    background-color: #fff;
+    position: relative;
+}
+header hr {
+        height: 0px; 
+        border: 8px solid; 
+        border-color: orangered #000 orange #000;
+}
+
+#back-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none; /* Remover sublinhado do link */
+    border-radius: 5px; /* Borda arredondada */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+.text-center h2{
+    color: orangered;
+}
+
+
+video{
+    width: 60%;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px; /* ou qualquer largura máxima desejada */
+    margin: 0 auto; /* centralizar o contêiner */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 500px; /* ou qualquer outra altura desejada */
+}

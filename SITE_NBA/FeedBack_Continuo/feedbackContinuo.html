@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NBA Feedback Continuo </title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="../lib/bootstrap3/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Página de Feedback</h1>
+        <hr>
+    </header>
+    <a id="back-button" href="../Home/index.html">Voltar para Home</a>
+    <section>
+        <h2>Coleta de Feedback dos Usuários</h2>
+        <form id="feedbackForm">
+            <label for="feedback">Deixe seu feedback:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+            <button type="button" onclick="submitFeedback()">Enviar Feedback</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Melhorias Baseadas em Opiniões</h2>
+        <ul id="improvementsList"></ul>
+        <button type="button" onclick="listFeedbacks()">Listar Feedbacks</button>
+    </section>
+
+    <script src="../lib/bootstrap3/js/bootstrap.min.js"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'OpenSans';
+    /*nome da fonte*/
+    src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+    /*caminho de onde está o arquivo da fonte*/
+    font-size: 1em;
+}
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+    font-size: 1em;
+}
+
+
+header {
+    color: orangered;
+    width: 100%;
+    height: 172px;
+    background-color: #fff;
+    position: relative;
+}
+header hr {
+        height: 0px; 
+        border: 8px solid; 
+        border-color: orangered #000 orange #000;
+}
+
+#back-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none; /* Remover sublinhado do link */
+    border-radius: 5px; /* Borda arredondada */
+}
+#news {
+    position: relative;
+    top: -110;
+
+}
+
+#news h2 {
+    color: orange;
+    /*cor do text0*/
+    font-family: 'OpenSans-Light';
+    /* chamando a fonte pelo nome da fonte*/
+    font-size: 48px;
+    /*tamanho da font*/
+    text-transform: uppercase;
+    /*para transformar o texto em maisculo*/
+    text-align: center;
+    /*centralizar o texto*/
+}
+
+#news hr {
+    /*linha embaixo do titulo de ultimas noticias*/
+    border: orangered solid 2px;
+    /*trocar a cor da linha (hr)*/
+    width: 279px;
+    margin: 0 auto;
+    /*é uma expressão para centralizar*/
+}
+
+#news .img-noticias {
+    margin-top: 20px;
+}
+
+#news .img-noticias h3 {
+    color: orangered;
+    font-size: 28px;
+    font-family: 'OpenSans';
+    font-weight: bold;
+    /*deixar em negrito o texto no h3*/
+    margin-bottom: 0;
+    margin-top: 4px;
+}
+
+#news time {
+    color: #A7A7A7;
+    font-size: 18px;
+    font-family: 'OpenSans';
+    font-weight: bold;
+}
+
+#estatisticasEquipes {
+    position: relative;
+    top: -110;
+
+}
+
+#estatisticasEquipes h2 {
+    color: orange;
+    /*cor do text0*/
+    font-family: 'OpenSans-Light';
+    /* chamando a fonte pelo nome da fonte*/
+    font-size: 48px;
+    /*tamanho da font*/
+    text-transform: uppercase;
+    /*para transformar o texto em maisculo*/
+    text-align: center;
+    /*centralizar o texto*/
+}
+
+#estatisticasEquipes hr {
+    /*linha embaixo do titulo de ultimas noticias*/
+    border: orangered solid 2px;
+    /*trocar a cor da linha (hr)*/
+    width: 279px;
+    margin: 0 auto;
+    /*é uma expressão para centralizar*/
+}
+
+#estatisticasJogadores h2 {
+    color: orange;
+    /*cor do text0*/
+    font-family: 'OpenSans-Light';
+    /* chamando a fonte pelo nome da fonte*/
+    font-size: 48px;
+    /*tamanho da font*/
+    text-transform: uppercase;
+    /*para transformar o texto em maisculo*/
+    text-align: center;
+    /*centralizar o texto*/
+}
+
+#estatisticasJogadores h2 small {
+    font-size: 21px;
+    display: block;
+    color: #797777;
+    font-family: 'OpenSans';
+    font-weight: bold;
+}
+
+#estatisticasJogadores hr {
+    /*linha embaixo do titulo de ultimas noticias*/
+    border: orangered solid 2px;
+    /*trocar a cor da linha (hr)*/
+    width: 279px;
+    margin: 0 auto;
+    /*é uma expressão para centralizar*/
+}
+
+#estatisticasJogadores .segundaImagem {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -25px;
+    margin-left: -647px;
+}
+

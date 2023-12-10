@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lib/bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css.css">
+    <title>NBA Engajamento e Interacao</title>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <section>
+            <h1>Pagina de Engajamento e Interação</h1>
+            <hr>
+        </section>
+    </header>
+    <a id="back-button" href="../Home/index.html">Voltar para Home</a>
+    <section>
+        <h2>Enquetes e Votações</h2>
+    
+        <div class="container">
+            <div class="row">
+                <!-- Primeira Enquete -->
+                <div class="col-md-3">
+                    <div class="poll-container" id="pollContainer1">
+                        <div class="poll-question">
+                            <p>Qual é o seu time favorito na NBA?</p>
+                        </div>
+                        <ul class="poll-options">
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption1" value="lakers"> Los Angeles Lakers
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption1" value="warriors"> Golden State Warriors
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption1" value="bucks"> Milwaukee Bucks
+                                </label>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-success btn-votar" onclick="submitVote('pollContainer1')">Votar</button>
+                        <div id="result1"></div>
+                    </div>
+                </div>
+    
+                <!-- Segunda Enquete -->
+                <div class="col-md-3">
+                    <div class="poll-container" id="pollContainer2">
+                        <div class="poll-question">
+                            <p>Qual é o seu jogador favorito na NBA?</p>
+                        </div>
+                        <ul class="poll-options">
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption2" value="lebron"> LeBron James
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption2" value="curry"> Stephen Curry
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption2" value="durant"> Kevin Durant
+                                </label>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-success btn-votar" onclick="submitVote('pollContainer2')">Votar</button>
+                        <div id="result2"></div>
+                    </div>
+                </div>
+    
+                <!-- Terceira Enquete -->
+                <div class="col-md-3">
+                    <div class="poll-container" id="pollContainer3">
+                        <div class="poll-question">
+                            <p>Qual é a sua equipe de rookies favorita?</p>
+                        </div>
+                        <ul class="poll-options">
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption3" value="hornets"> Charlotte Hornets
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption3" value="kings"> Sacramento Kings
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption3" value="hawks"> Atlanta Hawks
+                                </label>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-success btn-votar" onclick="submitVote('pollContainer3')">Votar</button>
+                        <div id="result3"></div>
+                    </div>
+                </div>
+    
+                <!-- Quarta Enquete -->
+                <div class="col-md-3">
+                    <div class="poll-container" id="pollContainer4">
+                        <div class="poll-question">
+                            <p>Qual é o seu treinador favorito na NBA?</p>
+                        </div>
+                        <ul class="poll-options">
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption4" value="popovich"> Gregg Popovich
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption4" value="rivers"> Doc Rivers
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="pollOption4" value="stevens"> Brad Stevens
+                                </label>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-success btn-votar" onclick="submitVote('pollContainer4')">Votar</button>
+                        <div id="result4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section>
+        <div class="fantasy-basketball">
+            <h2>Fantasy Basketball</h2> <br>
+            <p>Monte seu time de Fantasy Basketball selecionando seus jogadores favoritos:</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="fantasy-form">
+                        <h3>Escolha os jogadores do time 1</h3>
+
+                        <label for="player1_team1">Jogador 1:</label>
+                        <input type="text" id="player1_team1" name="player1_team1" placeholder="Nome do jogador 1">
+
+                        <label for="player2_team1">Jogador 2:</label>
+                        <input type="text" id="player2_team1" name="player2_team1" placeholder="Nome do jogador 2">
+
+                        <label for="player3_team1">Jogador 3:</label>
+                        <input type="text" id="player3_team1" name="player3_team1" placeholder="Nome do jogador 3">
+
+                        <label for="player4_team1">Jogador 4:</label>
+                        <input type="text" id="player4_team1" name="player4_team1" placeholder="Nome do jogador 4">
+
+                        <button type="button" class="btn btn-success btn-salvar-time"
+                            onclick="submitFantasyTeam('team1')">Salvar Time</button>
+                        <div id="fantasyResult_team1"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="fantasy-form">
+                        <h3>Escolha os jogadores do time 2</h3>
+
+                        <label for="player1_team2">Jogador 1:</label>
+                        <input type="text" id="player1_team2" name="player1_team2" placeholder="Nome do jogador 1">
+
+                        <label for="player2_team2">Jogador 2:</label>
+                        <input type="text" id="player2_team2" name="player2_team2" placeholder="Nome do jogador 2">
+
+                        <label for="player3_team2">Jogador 3:</label>
+                        <input type="text" id="player3_team2" name="player3_team2" placeholder="Nome do jogador 3">
+
+                        <label for="player4_team2">Jogador 4:</label>
+                        <input type="text" id="player4_team2" name="player4_team2" placeholder="Nome do jogador 4">
+
+                        <button type="button" class="btn btn-success btn-salvar-time"
+                            onclick="submitFantasyTeam('team2')">Salvar Time</button>
+                        <div id="fantasyResult_team2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Fórum de Discussão</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="discussion-form">
+                        <h3>Adicionar nova mensagem</h3>
+
+                        <label for="username">Nome de usuário:</label>
+                        <input type="text" id="username" name="username" placeholder="Seu nome de usuário">
+
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" placeholder="Digite sua mensagem aqui"></textarea>
+
+                        <button type="button" class="btn btn-success btn-enviar-mensagem" onclick="submitDiscussionMessage()">Enviar Mensagem</button>
+                        <div id="discussionResult"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="discussion-board">
+                        <h3>Discussões</h3>
+                        <ul id="discussionList">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Placar ao Vivo</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="live-score-table">
+                        <h3>Jogos em Andamento</h3>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Equipe A</th>
+                                    <th>Equipe B</th>
+                                    <th>Pontuação Equipe A</th>
+                                    <th>Pontuação Equipe B</th>
+                                    <th>Tempo Restante</th>
+                                </tr>
+                            </thead>
+                            <tbody id="liveScoreBody">
+                                <tr> <!--uma linha-->
+                                    <th>Celtics</th>
+                                    <th>Lakers</th>
+                                    <th>102</th>
+                                    <th>98</th>
+                                    <th>00:50s</th>
+                                </tr>
+                                
+                                <!-- Os jogos ao vivo serão exibidos aqui dinamicamente -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Quiz e Desafios</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="quiz-container">
+                        <h3>Quiz: Teste seu conhecimento sobre a NBA</h3>
+
+                        <div id="question" class="question"></div>
+
+                        <div id="options" class="options"></div>
+
+                        <button type="button" class="btn btn-primary btn-next" onclick="nextQuestion()">Próxima Pergunta</button>
+                        <div id="quizResult"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Comentários e Artigos</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="article-container">
+                        <h3>Artigo: "Os Destaques da Temporada na NBA"</h3>
+
+                        <p>
+                            A temporada atual da NBA está repleta de emocionantes confrontos e performances excepcionais.
+                            Times de elite competem arduamente nas quadras, proporcionando momentos memoráveis aos fãs do basquete.
+                            A NBA, conhecida por sua intensidade e talento, continua a ser uma liga espetacular que cativa
+                            audiências ao redor do mundo.
+                        </p>
+
+                        <h4>Comentários</h4>
+                        <ul id="commentList">
+                            <!-- Os comentários serão exibidos aqui dinamicamente -->
+                        </ul>
+
+                        <div class="comment-form">
+                            <h4>Adicionar Comentário</h4>
+
+                            <label for="commentUser">Nome de usuário:</label>
+                            <input type="text" id="commentUser" name="commentUser" placeholder="Seu nome de usuário">
+
+                            <label for="commentText">Comentário:</label>
+                            <textarea id="commentText" name="commentText" placeholder="Digite seu comentário"></textarea>
+
+                            <button type="button" class="btn btn-primary btn-comment" onclick="addComment()">Adicionar Comentário</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../lib/bootstrap3/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
